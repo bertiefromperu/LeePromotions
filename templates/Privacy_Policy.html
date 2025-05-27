@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Privacy Policy for Lee Promotions" />
+    <meta name="author" content="Lee Promotions" />
+    <title>Privacy Policy - Lee Promotions</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
+
+    <!-- Core theme CSS (Bootstrap Agency) -->
+    <link href="static/style.css" rel="stylesheet" />
+
+    <style>
+        body {
+            padding-top: 80px;
+        }
+        .page-section {
+            padding: 6rem 0;
+        }
+        .section-heading {
+            font-size: 2.5rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .section-subheading {
+            font-size: 1.25rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for ('home') }}"><img src="static/images/LeePromotions.jpeg" alt="Lee Promotions Logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <section class="page-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Privacy Policy</h2>
+                <h3 class="section-subheading text-muted">Your privacy is important to us</h3>
+            </div>
+            <div class="mt-4">
+                <p><strong>Last updated:</strong> April 15, 2025</p>
+                <p>Lee Promotions is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and protect any personal information that you provide while using our website.</p>
+
+                <h4>Information We Collect</h4>
+                <ul>
+                    <li>Personal identification information (Name, email address, phone number, etc.)</li>
+                    <li>Device Information (IP Address)</li>
+                </ul>
+
+                <h4>How We Use Your Information</h4>
+                <ul>
+                    <li>To respond to your inquiries and provide support</li>
+                    <li>To improve our website and services</li>
+                    <li>To send updates or promotional emails (if subscribed)</li>
+                </ul>
+
+                <h4>Cookies</h4>
+                <p>We may use cookies to enhance user experience. You can choose to disable cookies through your browser settings.</p>
+
+                <h4>Third-Party Services</h4>
+                <p>We may use third-party services for analytics or marketing purposes. These services may collect information as governed by their own privacy policies.</p>
+
+                <h4>Your Rights</h4>
+                <p>You have the right to access, update, or delete your personal information. Contact us at <a href="mailto:info@lee-promotions.com">info@lee-promotions.com</a> to make a request.</p>
+
+                <h4>Changes to This Policy</h4>
+                <p>We may update this privacy policy from time to time. Please check this page periodically for updates.</p>
+
+                <h4>Contact Us</h4>
+                <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:info@lee-promotions.com">info@lee-promotions.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; Lee Promotions</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/lee_promotions/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3" href="{{ url_for('privacy_policy') }}">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

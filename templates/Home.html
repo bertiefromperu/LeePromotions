@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Lee Promotions</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img src="static/images/LeePromotions.jpeg" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#upcoming-events">Upcoming Events</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#past-events">Past Events</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Welcome To Lee Promotions</div>
+                <div class="masthead-heading text-uppercase">Home of Cork Entertainment</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#upcoming-events">Learn More</a>
+            </div>
+        </header>
+
+<!-- Upcoming Events (Carousel Section) -->
+<section id="upcoming-events">
+    <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Upcoming Events</h2>
+                </div>
+    <div id="leePromotionsCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- Indicators (dots below the carousel) -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#leePromotionsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#leePromotionsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+
+        <!-- Carousel Images -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="static/images/Lovers.jpg" class="d-block w-100" alt="Kenny Lee">
+                <div class="carousel-caption">
+                    <h5>Lovers</h5>
+                    <p>A play written by Brian Friel. Hosted in the Cork Arts Theatre, produced by Sam Torres and directed by Aaron O'Keefe</p>
+                    <a class="btn btn-primary btn-xl text-uppercase" href="https://www.ticketsource.com/whats-on/ireland/cork-arts-theatre/lovers/e-molyxa" target="_blank">Book Tickets</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="static/images/MoreEvents.jpg" class="d-block w-100" alt="More Events to Come">
+
+            </div>
+        </div>
+
+        <!-- Carousel Controls (Next & Previous Buttons) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#leePromotionsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#leePromotionsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+        <!-- Past Events -->
+   <!-- <section id="past-events">
+
+    </section> -->
+
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <h3 class="section-subheading text-muted">Below lists the services we provide at Lee Promotions</h3>
+                </div>
+                <div class="row text-center">
+                <div class="col-md-4" >
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-danger"></i>
+                            <i class="fas fa-music fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Music</h4>
+                        <p class="text-muted">Versatile and gifted musicians are playing in Cork City every night. As an organisation organises gigs and concerts for these bands to get their music out there.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x ">
+                            <i class="fas fa-circle fa-stack-2x text-danger"></i>
+                            <i class="fas fa-film fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Theatre</h4>
+                        <p class="text-muted">Cork offers a wide variety of plays, musicals, etc all the time. Lee Promotions allows local talent to get the recognition they deserve.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x" >
+                            <i class="fas fa-circle fa-stack-2x text-danger"></i>
+                            <i class="fas fa-users fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Entertainment</h4>
+                        <p class="text-muted">Explore Cork's talented film scene and recognise some familiar faces from around. Film/Short Film screenings will be hosted and promoted by Lee Promotions across the city.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">About</h2>
+                    <h3 class="section-subheading text-muted">An overview of what Lee Promotions is all about</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/images/KennyLee.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Kenny Lee</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Lee Promotions is named after the late, great empresario, <strong>Kenny Lee</strong> who was renowned for his larger-than-life personality, entrepreneurial achievements and love for his city of birth, Cork. Kenny Lee always had strong passion for entertainment and his achievements highlight this! Pioneering the nightlife scene with the first plush nightclub in Cork City, <strong>Bogarts</strong>, followed by <strong>Spiders Nightclub and Bar</strong>. As well as working alongside Jim Aiken of Aiken Promotions, he was instrumental in the creation of Live at the Marquee Cork back in 2005. Lee Promotions aims to carry on the legacy of Kenny Lee through devoted passion to the entertainment industry of the city with the most vibrant and alive audiences in the world.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/images/CorkCity.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Our Story</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted"> Cork has always been a vibrant epicentre of music, theatre and all walks of art. <strong>Lee Promotions</strong> was created in and for Cork, to act as a promotion and production service for local bands and theatre artists, aiming to provide them with a platform. Whether that be as a beginning block for emerging artists or, for some, as a boost in capital to their already established and honed artistry. Designed to scale their productions to the level their talent and craft deserves. We will also be a strong voice for the completion of the Cork Event Centre and all the opportunities it will bring. A saga which has been rumbling since 2007.  </p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/images/Audience.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Our ambition</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Here at Lee Promotions we strive to promote live music and theatre that are happening around the city, while also prioritising all our clients and supporters' needs with our quality of service and hope of bringing the creativity and colourful arts of Cork City to life.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Be Part
+                                <br />
+                                Of Our
+                                <br />
+                                Story!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Team-->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">Get to know the faces behind it all</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="static/images/SamTorres.jpeg" alt="Sam Torres" />
+                            <h4>Sam Torres</h4>
+                            <p class="text-muted">Executive Director</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/sam-torres-lee/" target="_blank" aria-label="Sam Torres LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="static/images/TadhgO'Sullivan.jpeg" alt="Tadhg O' Sullivan" />
+                            <h4>Tadhg O'Sullivan</h4>
+                            <p class="text-muted">Head of Theatre Operations</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Tadhg O'Sullivan LinkedIn Profile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="static/images/AaronO'Donovan.jpeg" alt="Aaron O'Donovan" />
+                            <h4>Aaron O' Donovan</h4>
+                            <p class="text-muted">Director of Electronic Events</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Aaron O' Donovan LinkedIn Profile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted"></p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">For any queries related to the business or events please contact us below.</h3>
+                </div>
+
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms"></a>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                </form>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Lee Promotions</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/lee_promotions/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                         <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a> -->
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=61575831683938" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="{{ url_for('privacy_policy') }}">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
