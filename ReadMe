@@ -1,0 +1,13 @@
+This website was prodcued for a small local business made in Cork City of Ireland. The website is for a promotional company set out to shed more light on the iwdespread talent in the city of Cork
+This website was coded through Python's Flask and the styling was enhanced using HTML and a CSS Bootstrap. Although the CSS Bootstrap was provided off an online website (Linked below), it was edited through personal knowledge of the code.
+The website holds multiple functions but the sole purpose is to understand the business, why it was created and to familiarise with it's proprietors. Other functions are as follows:
+- View upcoming events and past events. Links to where to book tickets or venue locationb for the upcoming events provided.
+- The story behind the business.
+- Contact Us Form
+- Social Media Links
+- Privacy Policy
+
+This website features a sleek GUI that provides a user-friendly aspect to it. Some aspects that add to the GUI include:
+- Interactive Sticky Navigation Bar. Routes user to the necessary section of the page when clicked.
+- Carousel to highlight upcoming events. Buttons for toggling from events in carousel. Timer set to change event every 30 seconds or so. Button that reroutes you to website to book tickets.
+-
