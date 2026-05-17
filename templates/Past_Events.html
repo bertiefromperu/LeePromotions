@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Lee Promotions — Past Events. A look back at the unforgettable nights we've brought to Cork." />
+        <title>Past Events | Lee Promotions</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.png') }}" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body id="page-top" class="past-events-page">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-shrink" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/LeePromotions.jpeg') }}" alt="Lee Promotions logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#upcoming-events">Upcoming Events</a></li>
+                        <li class="nav-item"><a class="nav-link active-page" href="{{ url_for('past_events') }}">Past Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Hero -->
+        <section class="pe-hero">
+            <video class="pe-hero-video" autoplay muted loop playsinline>
+                <source src="{{ url_for('static', filename='assets/videos/Event2.mov') }}" type="video/mp4">
+            </video>
+            <div class="pe-hero-overlay"></div>
+            <div class="pe-hero-content container">
+                <div class="pe-breadcrumb">
+                    <a href="{{ url_for('home') }}">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Past Events</span>
+                </div>
+                <h1 class="pe-hero-title">Past Events</h1>
+                <p class="pe-hero-sub">A chronicle of the nights, performances, and memories that define Lee Promotions — and Cork's entertainment scene.</p>
+            </div>
+            <div class="pe-hero-scroll-hint">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <div class="pe-stats-bar">
+            <div class="container">
+                <div class="pe-stats-inner">
+                    <div class="pe-stat">
+                        <span class="pe-stat-number" id="totalEventsCount">15</span>
+                        <span class="pe-stat-label">Events Hosted</span>
+                    </div>
+                    <div class="pe-stat-divider"></div>
+                    <div class="pe-stat">
+                        <span class="pe-stat-number">3</span>
+                        <span class="pe-stat-label">Categories</span>
+                    </div>
+                    <div class="pe-stat-divider"></div>
+                    <div class="pe-stat">
+                        <span class="pe-stat-number">1</span>
+                        <span class="pe-stat-label">Year Active</span>
+                    </div>
+                    <div class="pe-stat-divider"></div>
+                    <div class="pe-stat">
+                        <span class="pe-stat-number">Cork</span>
+                        <span class="pe-stat-label">Our City</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="pe-main">
+            <div class="container">
+
+                <!-- Controls: Search + Filter -->
+                <div class="pe-controls">
+                    <div class="pe-search-wrap">
+                        <i class="fas fa-search pe-search-icon"></i>
+                        <input type="text" id="peSearch" class="pe-search-input" placeholder="Search events..." />
+                        <button class="pe-search-clear" id="peSearchClear" aria-label="Clear search">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="pe-filter-wrap">
+                        <button class="filter-pill active" data-filter="all">All</button>
+                        <button class="filter-pill" data-filter="theatre">Theatre</button>
+                        <button class="filter-pill" data-filter="music">Music</button>
+                        <button class="filter-pill" data-filter="entertainment">Entertainment</button>
+                    </div>
+                </div>
+
+                <!-- Active filter label -->
+                <div class="pe-results-label" id="peResultsLabel">
+                    Showing <strong id="peResultsCount">15</strong> events
+                </div>
+
+                <!-- Events Grid -->
+                <div class="pe-grid" id="peGrid">
+
+                    <!-- Blueprint -->
+                    <article class="pe-card" data-category="music" data-title="blueprint" data-year="2026">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/blueprint.jpg') }}" alt="Blueprint" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2026</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Blueprint</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Aye, Cork · 3 May 2026</p>
+                            <p class="pe-card-desc">A daytime electronic session bringing together Cork's finest selectors for an afternoon of house, techno, and beyond.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Electronic</span>
+                                <span class="pe-tag">House</span>
+                                <span class="pe-tag">Techno</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Phrases x Lee Promotions -->
+                    <article class="pe-card" data-category="music" data-title="phrases lee promotions" data-year="2026">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/phrases-lee.jpeg') }}" alt="Phrases x Lee Promotions" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2026</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Phrases x Lee Promotions</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Wavelength Rooftop Bar · 25 Apr 2026</p>
+                            <p class="pe-card-desc">A rooftop collaboration between Phrases and Lee Promotions — electronic music under the open sky with Cork's best DJs.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Electronic</span>
+                                <span class="pe-tag">Rooftop</span>
+                                <span class="pe-tag">Techno</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Jungle -->
+                    <article class="pe-card" data-category="music" data-title="jungle" data-year="2026">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/jungle.jpeg') }}" alt="Jungle" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2026</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Jungle</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Spailpin Fanach · 17 Apr 2026</p>
+                            <p class="pe-card-desc">Sulture x Lee Promotions brought the jungle to Spailpin Fanach — a raw, high-energy night of house, breaks, garage, and DNB.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">House</span>
+                                <span class="pe-tag">Breaks</span>
+                                <span class="pe-tag">Garage</span>
+                                <span class="pe-tag">DNB</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- LIA at Skybar -->
+                    <article class="pe-card" data-category="music" data-title="lia skybar" data-year="2026">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/lia-skybar.jpg') }}" alt="LIA at Skybar" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2026</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">LIA</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Skybar, Cork · 3 Apr 2026</p>
+                            <p class="pe-card-desc">LIA headlined Skybar with support from Rosina, Addy, and Jxmes — an electric night of electronic music on the Cork skyline.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Electronic</span>
+                                <span class="pe-tag">DJ Night</span>
+                                <span class="pe-tag">Skybar</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tag Team -->
+                    <article class="pe-card" data-category="music" data-title="tag team" data-year="2026">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/tag-team.jpg') }}" alt="Tag Team" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2026</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Tag Team</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Clancy's Skybar · 17 Mar 2026</p>
+                            <p class="pe-card-desc">Lee Promotions x Catacombs presented an all-day St. Patrick's Day party with 22 DJs spanning house, techno, breaks, garage, and DNB.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">All-Day</span>
+                                <span class="pe-tag">House</span>
+                                <span class="pe-tag">Techno</span>
+                                <span class="pe-tag">St. Patrick's Day</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Up-Shift -->
+                    <article class="pe-card" data-category="music" data-title="up-shift subtrax" data-year="2026">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/up-shift.jpg') }}" alt="Up-Shift" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2026</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Up-Shift</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Pavillion, Cork · 19 Feb 2026</p>
+                            <p class="pe-card-desc">Subtrax and Tara Casey headlined this Lee Promotions night at Pavillion — a high-energy electronic showcase with support from Leezur and Jazelle.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Electronic</span>
+                                <span class="pe-tag">DJ Night</span>
+                                <span class="pe-tag">Pavillion</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Encore (RAG Week) -->
+                    <article class="pe-card" data-category="music" data-title="encore rag week" data-year="2026">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/encore.jpeg') }}" alt="Encore – RAG Week" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Entertainment</div>
+                            <div class="pe-card-year-tag">2026</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Encore</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Pavillion, UCC · 19 Feb 2026</p>
+                            <p class="pe-card-desc">Lee Promotions presented Encore for UCC RAG Week 2026 — Mirrors and My Second Life performing live at the Pavillion, 6:30–10:30pm.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">RAG Week</span>
+                                <span class="pe-tag">UCC</span>
+                                <span class="pe-tag">Live Music</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Into the Underground -->
+                    <article class="pe-card" data-category="music" data-title="into the underground" data-year="2026">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/into-underground.jpg') }}" alt="Into the Underground" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2026</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Into the Underground</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Skybar, Cork · 17 Feb 2026</p>
+                            <p class="pe-card-desc">Lee Promotions x Intoxica brought five of Cork's most exciting underground selectors together for a night beneath the city's surface.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Techno</span>
+                                <span class="pe-tag">Underground</span>
+                                <span class="pe-tag">Electronic</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Skybar Jan 2026 -->
+                    <article class="pe-card" data-category="music" data-title="skybar january 2026" data-year="2026">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/skybar-yellow.jpg') }}" alt="Skybar – January 2026" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2026</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Skybar</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Skybar, Cork · 24 Jan 2026</p>
+                            <p class="pe-card-desc">CC Outpost x Lee Promotions kicked off 2026 at Skybar with a full night of techno, breaks, garage, and house.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Techno</span>
+                                <span class="pe-tag">House</span>
+                                <span class="pe-tag">Breaks</span>
+                                <span class="pe-tag">Garage</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 2025 Drop NYE -->
+                    <article class="pe-card" data-category="music" data-title="2025 drop nye new years" data-year="2025">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/nye.jpg') }}" alt="2025 Drop NYE" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2025</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">2025 Drop N.Y.E.</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Clancy's Room 2 · 31 Dec 2025</p>
+                            <p class="pe-card-desc">Lee Promotions x Low End Assembly rang in 2026 at Clancy's Room 2 — a New Year's Eve night of electronic music until late.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">NYE</span>
+                                <span class="pe-tag">Electronic</span>
+                                <span class="pe-tag">New Year's</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Skybar Dec 2025 -->
+                    <article class="pe-card" data-category="music" data-title="skybar december 2025 clancys rooftop" data-year="2025">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/skybar-dec.jpg') }}" alt="Skybar – Clancy's Rooftop, Dec 2025" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2025</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Skybar</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Clancy's Rooftop · 23 Dec 2025</p>
+                            <p class="pe-card-desc">Lee Promotions x Catacombs hosted a pre-Christmas rooftop session at Clancy's — the perfect send-off into the festive season.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Rooftop</span>
+                                <span class="pe-tag">Electronic</span>
+                                <span class="pe-tag">Christmas</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- College Christmas -->
+                    <article class="pe-card" data-category="music" data-title="college christmas liberty" data-year="2025">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/college-christmas.jpeg') }}" alt="College Christmas" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Entertainment</div>
+                            <div class="pe-card-year-tag">2025</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">College Christmas</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>The Liberty, Cork · 20 Nov 2025</p>
+                            <p class="pe-card-desc">Lee Promotions & GC Outpost took over The Liberty for a full venue College Christmas — 2 floors, 20+ DJs, 12 hours of non-stop music.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">College</span>
+                                <span class="pe-tag">Full Venue</span>
+                                <span class="pe-tag">Christmas</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Skybar Nov 2025 -->
+                    <article class="pe-card" data-category="music" data-title="skybar november 2025" data-year="2025">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/skybar-purple.jpg') }}" alt="Skybar – November 2025" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2025</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Skybar</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Skybar, Cork · 13 Nov 2025</p>
+                            <p class="pe-card-desc">Lee Promotions & CC Outpost brought five selectors together at Skybar for a night of electronic music from 9pm to close.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Electronic</span>
+                                <span class="pe-tag">House</span>
+                                <span class="pe-tag">Techno</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Ascension -->
+                    <article class="pe-card" data-category="music" data-title="ascension" data-year="2025">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/ascension.jpg') }}" alt="Ascension" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2025</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Ascension</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Spailpin Fanach · 11 Oct 2025</p>
+                            <p class="pe-card-desc">Lee Promotions launched Ascension at Spailpin Fanach — a night of electronic music headlined by Tobin, AOM, Addy, and Leezur b2b Mr Smithers.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Electronic</span>
+                                <span class="pe-tag">Techno</span>
+                                <span class="pe-tag">Launch Night</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Levels -->
+                    <article class="pe-card" data-category="music" data-title="levels liberty" data-year="2025">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/levels.jpeg') }}" alt="Levels" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Music</div>
+                            <div class="pe-card-year-tag">2025</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Levels</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>The Liberty, Cork · 11 Sep 2025</p>
+                            <p class="pe-card-desc">Two floors, two sounds — Groove Floor and Techno Floor at The Liberty, bringing the best of Cork's electronic scene under one roof.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Techno</span>
+                                <span class="pe-tag">House</span>
+                                <span class="pe-tag">Two Floors</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- No Other Land -->
+                    <article class="pe-card" data-category="entertainment" data-title="no-other-land" data-year="2025">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/no-other-land.jpeg') }}" alt="No Other Land" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Entertainment</div>
+                            <div class="pe-card-year-tag">2025</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">No Other Land</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Actorsvision Studio · 23 August 2025</p>
+                            <p class="pe-card-desc">Academy Award Winner for Best Documentary Feature Film. Lee Promotions x Cork Film Community presented a special screening of this landmark film.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Film</span>
+                                <span class="pe-tag">Documentary</span>
+                                <span class="pe-tag">Screening</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Lovers -->
+                    <article class="pe-card" data-category="theatre" data-title="no-other-land" data-year="2025">
+                        <div class="pe-card-img-wrap">
+                            <img src="{{ url_for('static', filename='images/events/Lovers.jpg') }}" alt="Lovers" class="pe-card-img" />
+                            <div class="pe-card-cat-badge">Theatre</div>
+                            <div class="pe-card-year-tag">2025</div>
+                        </div>
+                        <div class="pe-card-body">
+                            <h2 class="pe-card-title">Lovers</h2>
+                            <p class="pe-card-venue"><i class="fas fa-map-marker-alt me-1"></i>Cork Arts Theatre · 4-7 June 2025</p>
+                            <p class="pe-card-desc">Lee Promotions presented Lovers by Brian Friel, produced by Sam Torres and directed by Aaron O'Keefe.</p>
+                            <div class="pe-card-tags">
+                                <span class="pe-tag">Performative Arts</span>
+                                <span class="pe-tag">Theatre</span>
+                                <span class="pe-tag">Play</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- No Results -->
+                <div class="pe-no-results" id="peNoResults" style="display:none;">
+                    <i class="fas fa-theater-masks"></i>
+                    <h3>No events found</h3>
+                    <p>Try a different search or category filter.</p>
+                    <button class="btn-event-outline" id="peResetBtn">Show All Events</button>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- CTA Strip -->
+        <section class="pe-cta-strip">
+            <div class="container text-center">
+                <p class="pe-cta-label">Want to know what's next?</p>
+                <h2 class="pe-cta-title">Check Out Upcoming Events</h2>
+                <a href="{{ url_for('home') }}#upcoming-events" class="btn btn-event-primary mt-3">
+                    <i class="fas fa-calendar-alt me-2"></i>View Upcoming Events
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Lee Promotions</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/lee_promotions/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=61575831683938" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="{{ url_for('privacy_policy') }}">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    </body>
+</html>

@@ -11,6 +11,9 @@ def start():
 def home():
     return render_template('Home.html')
 
+@app.route('/Past_Events')
+def past_events():
+    return render_template('Past_Events.html')
 
 @app.route('/Privacy_Policy')
 def privacy_policy():
@@ -18,4 +21,5 @@ def privacy_policy():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
